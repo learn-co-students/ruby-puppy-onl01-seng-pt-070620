@@ -1,13 +1,13 @@
 require 'pry'
 
 class Dog 
-  attr_accessor :name
+  attr_accessor :name, :save
   
   @@all = []
   
   def initialize(name)
     @name = name
-    @@all << self
+    @save = save
   end
   
   def self.all
@@ -20,9 +20,13 @@ class Dog
   end
   
   def self.print_all
-    @@all.each do |id, @name|
-      
+    @@all.each do |dog|
+      puts "#{dog.name}"
     end
+  end
+  
+  def save
+    @@all << self
   end
   
 end
