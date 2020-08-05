@@ -2,6 +2,7 @@ require "pry"
  
  class Dog
    
+   attr_accessor :name, :save
    @@all = []
    
    def initialize(name)
@@ -16,12 +17,10 @@ require "pry"
    def self.all
      @@all
    end
-   
   
   def self.print_all
-binding.pry
-    @@all.each do |pup|
-      puts pup
+    self.all.each do |pup|
+      puts pup.name
     end
   end
    
