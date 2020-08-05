@@ -6,7 +6,7 @@ require "pry"
    
    def initialize(name)
      @name = name
-     @save = save
+    save
    end
    
    def save
@@ -17,6 +17,7 @@ require "pry"
      @@all
    end
    
+  
   def self.print_all
 binding.pry
     @@all.each do |pup|
